@@ -22,6 +22,7 @@
 
 	specialArgs = {
 	  inherit input;
+	  inherit unstable;
 	};
 
 	modules = [ 
