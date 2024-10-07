@@ -5,23 +5,28 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";  # could be shortned to "nixpkgs/nixos-24.05"
 
-    unstable.url = "nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, unstable, ... } @ input:
+  outputs = { self, nixpkgs, nixpkgs-unstable, ... } @ input:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       # pkgs = nixpkgs.legacyPackages.${system};
-      # pkgs-unstable = nixpkgs.legacyPackages.${system};
+      # unstable = nixpkgs.legacyPackages.${system};
+      commonArgs = { inherit system; config.allowUnfree = true; };
+      pkgs = import nixpkgs commonArgs;
+      unstable = import nixpkgs-unstable commonArgs;
     in {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
 
-        inherit system;  # system = "x86_64-linux";
+        # inherit system;  # system = "x86_64-linux";
+	inherit pkgs;
 
 	specialArgs = {
-	  inherit input;
+	  # inherit input;
+	  # inherit pkgs;
 	  inherit unstable;
 	};
 

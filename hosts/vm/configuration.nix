@@ -62,8 +62,9 @@
     packages = with pkgs; [];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # Allow unfree packages -> handled in flake.nix
+  # nixpkgs.config.allowUnfree = true;
+  # unstable.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
