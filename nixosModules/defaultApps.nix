@@ -1,6 +1,6 @@
 # nixosModules/defaultApps.nix
 
-{ pkgs, unstable, ...}: 
+{ config, pkgs, unstable, ...}: 
 
 {
   # packages isntalled in system profile
@@ -8,7 +8,7 @@
 
     zsh
     zsh-autosuggestions
-    zsh-syntax-highliting
+    zsh-syntax-highlighting
     kitty
 
     wget
