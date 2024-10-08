@@ -11,7 +11,7 @@
   outputs = { self, nixpkgs, nixpkgs-unstable, ... } @ input:
     let
       system = "x86_64-linux";
-      lib = nixpkgs.lib;
+      # lib = nixpkgs.lib;
       # pkgs = nixpkgs.legacyPackages.${system};
       # unstable = nixpkgs.legacyPackages.${system};
       commonArgs = { inherit system; config.allowUnfree = true; };
@@ -19,15 +19,15 @@
       unstable = import nixpkgs-unstable commonArgs;
     in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      nixos = nixpkgs.lib.nixosSystem {
 
-        # inherit system;  # system = "x86_64-linux";
-	inherit pkgs;
+        # inherit system;  # not needed as it is already inherited through let
+	# inherit pkgs;
 
 	specialArgs = {
-	  # inherit input;
-	  # inherit pkgs;
-	  inherit unstable;
+	  inherit input;	# to eventually use different inputs
+	  inherit pkgs;		# for evaluation of import statement
+	  inherit unstable;	# pass unstable modules
 	};
 
 	modules = [ 
