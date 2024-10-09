@@ -22,12 +22,13 @@
   
       ]) ++ (with pkgs.python312Packages; [
 
-        python312Packages.numpy
+        numpy
+	torch
 
       ]);
 
       shellHook = ''
-        zsh
+        exec zsh
       '';
 
     };
