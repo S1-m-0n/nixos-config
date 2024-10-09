@@ -17,15 +17,10 @@
     tldr
 
     firefox
-    thunderbird
-    discord
-    spotify
-    obsidian
 
   ]) ++ (with unstable; [
 
     bitwarden-desktop
-    ticktick
 
   ]);
 }
