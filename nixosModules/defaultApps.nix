@@ -3,6 +3,7 @@
 { config, pkgs, unstable, ...}: 
 
 {
+
   # packages isntalled in system profile
   environment.systemPackages = (with pkgs; [
 

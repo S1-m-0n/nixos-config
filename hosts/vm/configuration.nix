@@ -62,6 +62,10 @@
     packages = with pkgs; [];
   };
 
+  # set zsh as default shell for user simon
+  programs.zsh.enable = true;
+  users.users.simon.shell = pkgs.zsh;
+
   # Allow unfree packages -> handled in flake.nix
   # nixpkgs.config.allowUnfree = true;
   # unstable.config.allowUnfree = true;

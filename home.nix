@@ -29,7 +29,13 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
+    autosuggestion.enable = true;	# enableAutosuggestions is renamed to it
+    syntaxHighlighting.enable = true;
+  };
+
+  programs.kitty = {
+    enable = true;
+    shellIntegration.enableZshIntegration = true;
   };
 
   home.stateVersion = "24.05";
