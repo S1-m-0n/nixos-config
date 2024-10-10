@@ -7,14 +7,11 @@
   environment.systemPackages = (with pkgs; [
 
     zsh
-    zsh-autosuggestions
-    zsh-syntax-highlighting
     kitty
 
     wget
     git
     neovim
-    tldr
 
     firefox
 
