@@ -25,24 +25,24 @@
       nixos = nixpkgs.lib.nixosSystem {
 
         # inherit system;  # not needed as it is already inherited through let
-	# inherit pkgs;
+        # inherit pkgs;
 
-	specialArgs = {
-	  inherit input;	# to eventually use different inputs
-	  inherit pkgs;		# for evaluation of import statement
-	  inherit unstable;	# pass unstable modules
-	};
+        specialArgs = {
+          inherit input;    # to eventually use different inputs
+          inherit pkgs;		  # for evaluation of import statement
+          inherit unstable;	# pass unstable modules
+        };
 
-	modules = [ 
-	  ./hosts/vm/configuration.nix
+        modules = [ 
+          ./hosts/vm/configuration.nix
 
-	  home-manager.nixosModules.home-manager {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-	    home-manager.users.simon = import ./home.nix;
-	  }
-	];
+            home-manager.users.simon = import ./home.nix;
+          }
+        ];
       };
     };
   };
