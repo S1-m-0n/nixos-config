@@ -62,6 +62,21 @@
     packages = with pkgs; [];
   };
 
+  # Define font
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "Hack" ]; })
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Hack Serif" ];
+        sansSerif = [ "Hack" ];
+        monospace = [ "Hack Mono" ];
+      };
+    };
+  };
+
   # set zsh as default shell for user simon
   programs.zsh.enable = true;
   users.users.simon.shell = pkgs.zsh;
@@ -88,6 +103,9 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  # Enable qemu guest agent
+  services.qemuGuest.enable = true;
 
   # Enable spice-vdagent
   services.spice-vdagentd.enable = true;
