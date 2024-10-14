@@ -4,6 +4,11 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ./nixosModules/neovim/neovim.nix
+    ./nixosModules/yazi/yazi.nix
+  ];
   
   home.username = "simon";
   home.homeDirectory = "/home/simon";

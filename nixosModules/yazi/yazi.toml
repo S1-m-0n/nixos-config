@@ -1,0 +1,21 @@
+[manager]
+show_hidden = true
+show_symlink = true
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true },
+]
+pdf = [
+  { run = 'zathura "$@"', orphan = true },
+]
+appimage = [
+  { run = '$@', orphan = true },
+]
+
+[open]
+rules = [
+  { name = '*.pdf', use = 'pdf' },
+  { name = '*.AppImage', use = 'appimage' },
+]
+
