@@ -3,9 +3,13 @@ return {
 
   config = function ()
     require('nvim-treesitter.configs').setup {
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "latex" },
-      sync_install = false,
-      auto_install = true,
+
+      -- manage treesitter directly through nix
+      -- ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "latex" },
+      -- sync_install = false,
+      -- auto_install = true,
+      ensure_installed = {},
+      auto_install = false,
 
       highlight = { enable = true },
       indent = { enable = true },
