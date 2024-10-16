@@ -8,6 +8,7 @@
   imports = [
     ./nixosModules/neovim/neovim.nix
     ./nixosModules/yazi/yazi.nix
+    ./nixosModules/desktopEnvironments/gnome-home.nix
   ];
   
   home.username = "simon";
