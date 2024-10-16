@@ -36,6 +36,7 @@
     fzf
     zip
     unzip
+    lazygit
 
     (nerdfonts.override { fonts = [ "Hack" ]; })
 
