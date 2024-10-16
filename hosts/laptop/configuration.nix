@@ -8,6 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./../../nixosModules/defaultApps.nix
+      ./../../nixosModules/desktopApps.nix
+      ./../../nixosModules/desktopEnvironments/gnome.nix
     ];
 
   # Bootloader.
