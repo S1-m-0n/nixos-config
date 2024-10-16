@@ -13,6 +13,22 @@
   home.username = "simon";
   home.homeDirectory = "/home/simon";
 
+  fonts = {
+    # packages = with pkgs; [
+    #   (nerdfonts.override { fonts = [ "Hack" ]; })
+    # ];
+
+    fontconfig.enable = true;
+
+    # fontconfig = {
+    #   defaultFonts = {
+    #     serif = [ "Hack Serif" ];
+    #     sansSerif = [ "Hack" ];
+    #     monospace = [ "Hack Mono" ];
+    #   };
+    # };
+  };
+
   home.packages = with pkgs; [
 
     tldr
@@ -20,6 +36,8 @@
     fzf
     zip
     unzip
+
+    (nerdfonts.override { fonts = [ "Hack" ]; })
 
   ];
 
