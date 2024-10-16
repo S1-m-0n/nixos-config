@@ -4,6 +4,10 @@
 
 {
 
+  import = [
+    ./python312.nix
+  ];
+
   # packages isntalled in system profile
   environment.systemPackages = (with pkgs; [
 
@@ -14,8 +18,6 @@
     git
     neovim
     yazi
-
-    python3
 
     firefox
 
