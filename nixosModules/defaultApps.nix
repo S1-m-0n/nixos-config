@@ -13,6 +13,9 @@
     wget
     git
     neovim
+    yazi
+
+    python3
 
     firefox
 
