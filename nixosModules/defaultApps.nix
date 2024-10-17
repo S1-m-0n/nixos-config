@@ -4,7 +4,7 @@
 
 {
 
-  import = [
+  imports = [
     ./python312.nix
   ];
 
