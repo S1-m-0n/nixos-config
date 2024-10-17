@@ -25,11 +25,6 @@
       close = [ "<Super>q" ];
     };
 
-    # launcher keybindings
-    # "org/gnome/settings-daemon/plugins/media-keys" = {
-    #   www = [ "<Super>c" ];
-    # };
-
     # media key bindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
 
