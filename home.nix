@@ -6,6 +6,7 @@
 {
 
   imports = [
+    ./nixosModules/kitty/default.nix
     ./nixosModules/neovim/neovim.nix
     ./nixosModules/yazi/yazi.nix
     ./nixosModules/desktopEnvironments/gnome-home.nix
