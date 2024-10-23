@@ -40,6 +40,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
+            # to pass unstable to home-manager
+            home-manager.extraSpecialArgs = {
+              inherit input;
+              inherit unstable;
+            };
+
             home-manager.users.simon = import ./home.nix;
           }
         ];
