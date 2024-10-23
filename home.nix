@@ -1,7 +1,7 @@
 # home.nix
 # personal home manager configuration
 
-{ config, pkgs, ... }:
+{ config, pkgs, unstable, ... }:
 
 {
 
