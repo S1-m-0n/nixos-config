@@ -11,6 +11,7 @@
     ./nixosModules/yazi/yazi.nix
     ./nixosModules/desktopEnvironments/gnome-home.nix
     ./nixosModules/zotero/default.nix
+    ./nixosModules/texlive/default.nix
   ];
   
   home.username = "simon";
