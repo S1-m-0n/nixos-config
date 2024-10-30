@@ -7,6 +7,12 @@
 { config, pkgs, unstable, ... }:
 
 {
+
+  # language server for commonly used languages
+  home.packages = with pkgs; [
+    pyright
+    metals
+  ];
   
   programs.neovim = {
     enable = true;

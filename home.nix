@@ -10,6 +10,7 @@
     ./nixosModules/neovim/neovim.nix
     ./nixosModules/yazi/yazi.nix
     ./nixosModules/desktopEnvironments/gnome-home.nix
+    ./nixosModules/zotero/default.nix
   ];
   
   home.username = "simon";
@@ -39,6 +40,8 @@
     zip
     unzip
     lazygit
+
+    wl-clipboard
 
     (nerdfonts.override { fonts = [ "Hack" ]; })
 

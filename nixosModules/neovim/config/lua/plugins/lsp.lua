@@ -35,6 +35,7 @@ return {
       -- other lsps without using metals
       require('neodev').setup()
       require('lspconfig').metals.setup{}
+      require('lspconfig').pyright.setup{}
 
     end,
   },
