@@ -18,6 +18,7 @@
     git
     neovim
     yazi
+    tmux
 
     firefox
 
